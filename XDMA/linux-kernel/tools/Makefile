@@ -11,6 +11,9 @@ dma_from_device: dma_from_device.o
 performance: performance.o
 	$(CC) -o $@ $< -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGE_FILE_SOURCE
 
+dma_poll_test: dma_poll_test.o
+	$(CC) -o $@ $< -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGE_FILE_SOURCE
+
 reg_rw: reg_rw.o
 	$(CC) -o $@ $<
 
